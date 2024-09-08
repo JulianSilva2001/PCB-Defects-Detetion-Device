@@ -6,6 +6,8 @@ This repository contains the code and resources for a PCB defects detection devi
 
 The PCB defects detection device is designed to automate the inspection process, ensuring high-quality standards in PCB manufacturing. The device employs a camera to capture images of PCBs and uses a trained model to detect various types of defects.
 
+![Alt text](image-url)
+
 ## Features
 
 - **Computer Vision**: The project leverages computer vision to process and analyze images of PCBs. This involves techniques such as image enhancement, feature extraction, and object detection.
