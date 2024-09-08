@@ -28,9 +28,8 @@ The PCB defects detection device is designed to automate the inspection process,
     pip install -r requirements.txt
     ```
 
-3. **Training the Model**: Use the provided scripts and dataset to train the defect detection model.
 
-4. **Running the Device**: Follow the setup instructions in the documentation to assemble the hardware and run the device.
+3. **Running the Device**: Follow the setup instructions in the documentation to assemble the hardware and run the device.
 
 ## Documentation
 
