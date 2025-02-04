@@ -13,6 +13,9 @@ import PIL
 from io import BytesIO
 import time
 
+from component_deffects import detect_anomaly
+
+
 # External packages
 #import streamlit as st
 
@@ -188,6 +191,7 @@ def get_index_by_value(value):
     return None
 
 def object_detection_upload():
+
     source_img = st.sidebar.file_uploader(
             "Choose an image...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
     
@@ -234,7 +238,7 @@ def Component_Defects_upload():
     source_img = st.sidebar.file_uploader(
             "Choose a source PCB...", type=("jpg", "jpeg", "png", 'bmp', 'webp'))
     if source_img is not None:
-        st.sidebar.image(source_img)
+        st.sidebar.image(reference_img)
 
     if reference_img is not None and source_img is not None:
         reference_img = Image.open(reference_img)
@@ -249,7 +253,7 @@ def Component_Defects_upload():
                     st.write("No Reference PCB uploaded")
             else:
                 #uploaded_image = PIL.Image.open(source_img)
-                st.image(reference_img, caption="Reference PCB",
+                st.image(source_img, caption="Reference PCB",
                             use_column_width=True)
         except Exception as ex:
             st.error("Error occurred while opening the image.")
@@ -264,23 +268,26 @@ def Component_Defects_upload():
                 reference_img = cv2.cvtColor(np.array(reference_img), cv2.COLOR_RGB2BGR)
                 source_img = cv2.cvtColor(np.array(source_img), cv2.COLOR_RGB2BGR)
 
-                # Convert images to grayscale
-                gray1 = cv2.cvtColor(reference_img, cv2.COLOR_BGR2GRAY)
-                gray2 = cv2.cvtColor(source_img, cv2.COLOR_BGR2GRAY)
-                # Compute absolute difference between the two images
-                difference = cv2.absdiff(gray2, gray1)
-                # Apply thresholding to highlight the differences
-                _, thresholded = cv2.threshold(difference, 110, 255, cv2.THRESH_BINARY)
-                # Find contours of the differences
-                contours, _ = cv2.findContours(thresholded, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-                # Draw rectangles around the differing regions
-                for contour in contours:
-                    x, y, w, h = cv2.boundingRect(contour)
-                    source_img = cv2.cvtColor(np.array(source_img), cv2.COLOR_BGR2RGB)
-                    cv2.rectangle(source_img, (x, y), (x + w, y + h), (255, 0, 0), 5)
+                # # Convert images to grayscale
+                # gray1 = cv2.cvtColor(reference_img, cv2.COLOR_BGR2GRAY)
+                # gray2 = cv2.cvtColor(source_img, cv2.COLOR_BGR2GRAY)
+                # # Compute absolute difference between the two images
+                # difference = cv2.absdiff(gray2, gray1)
+                # # Apply thresholding to highlight the differences
+                # _, thresholded = cv2.threshold(difference, 110, 255, cv2.THRESH_BINARY)
+                # # Find contours of the differences
+                # contours, _ = cv2.findContours(thresholded, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
+                # # Draw rectangles around the differing regions
+                # for contour in contours:
+                #     x, y, w, h = cv2.boundingRect(contour)
+                #     source_img = cv2.cvtColor(np.array(source_img), cv2.COLOR_BGR2RGB)
+                #     cv2.rectangle(source_img, (x, y), (x + w, y + h), (255, 0, 0), 5)
+
+
+                defects_detected_image = detect_anomaly(reference_img,source_img) 
 
             
-                st.image(source_img, caption='Tested PCB')
+                st.image(defects_detected_image, caption='Tested PCB')
             else:
                 st.sidebar.write("Please upload both a reference image and a source image.")
 
