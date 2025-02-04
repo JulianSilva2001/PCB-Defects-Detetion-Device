@@ -162,6 +162,11 @@ Similar to PCB defects detection, but focuses on **component placement**.
 
 2. **Running the Device**: Follow the setup instructions in the documentation to assemble the hardware and run the device.
 
+
+🤝 Contributing
+
+Contributions are welcome! Feel free to submit issues or pull requests.
+
 ## Documentation
 
 Detailed documentation, including setup instructions and usage guidelines, can be found in the [project document](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/PCB_Defects_Detection_Documentation%20(7).pdf).
