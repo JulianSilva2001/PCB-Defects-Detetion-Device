@@ -20,7 +20,7 @@ The PCB defects detection device is designed to automate the inspection process,
 - **Enclosure Design**: Design files for the device enclosure are also included, ensuring a complete package for building the physical device.
 - **Web App**: The code for the web application used to interact with the device is also available, allowing for real-time monitoring and analysis through a user-friendly interface.
 
-## PCB Schematic Design
+## PCB and Schematic Design
 
 ### 🔩 Component Selection
 The PCB inspection device consists of the following key modules:
@@ -51,7 +51,14 @@ The ESP32S is chosen for its:
 - **Adjustable Intensity:** Controlled via a potentiometer for adaptable lighting conditions.
 - **Enhanced Versatility:** Ensures accurate inspection across diverse environments.
 
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Shematic.png)
+*Figure 1: Schematic Diagram of the PCB Inspection Device*
 
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/PCB1.png)
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/PCB2.png)
+*Figure 2: PCB Design Diagram of the PCB Inspection Device*
+
+## Enclosure Design 
 
 ## Getting Started
 
