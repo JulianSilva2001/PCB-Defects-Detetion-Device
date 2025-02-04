@@ -52,13 +52,40 @@ The ESP32S is chosen for its:
 - **Enhanced Versatility:** Ensures accurate inspection across diverse environments.
 
 ![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Shematic.png)
-*Figure 1: Schematic Diagram of the PCB Inspection Device*
+*Figure 1: Schematic Diagram*
 
 ![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/PCB1.png)
 ![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/PCB2.png)
-*Figure 2: PCB Design Diagram of the PCB Inspection Device*
+*Figure 2: PCB Design*
 
 ## Enclosure Design 
+
+### 🏗 Key Considerations
+The enclosure was designed to optimize functionality, ease of use, and performance:
+
+1. **Mounting for Camera and PCB**
+   - Dedicated mounting points secure the camera and PCB for stable inspection.
+   
+2. **Acrylic Flat Surface**
+   - Provides a clear, stable platform for precise PCB inspection.
+
+3. **Adjustable Camera Height**
+   - An aluminum bar allows users to set the optimal distance for capturing detailed images.
+
+4. **Ring of Light**
+   - Ensures uniform illumination, eliminating shadows for accurate defect detection.
+
+5. **On/Off Button**
+   - Controls the power supply, enhancing convenience and safety.
+
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Enclosure1.png)
+*Figure 3: Enclosure V1*
+
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Enclosure2.png)
+*Figure 4: Enclosure V2*
+
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Enclosure%20Draft%20Analysis.png)
+*Figure 5: Draft Analysis*
 
 ## Getting Started
 
