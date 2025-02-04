@@ -20,6 +20,39 @@ The PCB defects detection device is designed to automate the inspection process,
 - **Enclosure Design**: Design files for the device enclosure are also included, ensuring a complete package for building the physical device.
 - **Web App**: The code for the web application used to interact with the device is also available, allowing for real-time monitoring and analysis through a user-friendly interface.
 
+## PCB Schematic Design
+
+### 🔩 Component Selection
+The PCB inspection device consists of the following key modules:
+1. **Microcontroller:** ESP-WROOM-32 (ESP32)
+2. **Camera:** OV2460
+3. **Lighting System:** High-brightness LED strip
+4. **Power Supply:** Micro USB-powered regulated system
+
+### 🔌 Microcontroller: ESP-WROOM-32
+The ESP32S is chosen for its:
+- **WiFi and Bluetooth Integration:** Enables high-speed image transmission (~6 Mbps).
+- **Processing Power:** Dual-core Tensilica LX6 (240 MHz) for efficient image processing.
+- **Memory:** 520 KB SRAM to support high-performance operations.
+
+### 📷 Camera: OV5640
+- **Resolution:** 5MP sensor 
+- **Optical Features:** Low light sensitivity and high dynamic range for accurate PCB inspection.
+- **Digital Video Port (DVP) Interface:** Ensures seamless integration with ESP32.
+- **Power Requirements:** 2.8V core operation, 1.2V I/O.
+
+### 🔋 Power Supply
+- **Voltage Regulation:** Converts 5V USB input to required voltages.
+- **Stable Power:** Voltage regulators ensure consistent performance.
+- **Convenience:** USB-powered for easy deployment.
+
+### 💡 Lighting System
+- **LED Strip:** Provides uniform illumination for defect detection.
+- **Adjustable Intensity:** Controlled via a potentiometer for adaptable lighting conditions.
+- **Enhanced Versatility:** Ensures accurate inspection across diverse environments.
+
+
+
 ## Getting Started
 
 1. **Clone the Repository**: 
