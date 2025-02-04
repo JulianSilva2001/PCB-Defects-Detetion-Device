@@ -96,13 +96,6 @@ The enclosure was designed to optimize functionality, ease of use, and performan
 
 ## 🌐 Building the Web Application
 
-### 🚀 Why Streamlit?
-Streamlit is chosen for its simplicity in developing interactive AI-driven web applications. Key benefits include:
-- **Interactive Widgets:** Provides buttons, sliders, and file uploaders.
-- **Real-time Updates:** Ensures live feedback, crucial for PCB inspection.
-- **Easy Integration:** Works seamlessly with OpenCV, PIL, and YOLO.
-- **Rapid Prototyping:** Simple syntax enables quick development and testing.
-
 ### 📂 Application Structure
 The web app offers real-time PCB defect detection through a live camera feed or image uploads.
 
