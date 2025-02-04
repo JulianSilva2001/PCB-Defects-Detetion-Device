@@ -58,6 +58,9 @@ The ESP32S is chosen for its:
 ![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/PCB2.png)
 *Figure 2: PCB Design*
 
+
+
+
 ## Enclosure Design 
 
 ### 🏗 Key Considerations
@@ -85,7 +88,76 @@ The enclosure was designed to optimize functionality, ease of use, and performan
 *Figure 4: Enclosure V2*
 
 ![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Enclosure%20Draft%20Analysis.png)
+
 *Figure 5: Draft Analysis*
+
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Image%20Doc/PCBfitsEnclosure.jpg)
+*Figure 6: How the PCB fits the enclosure*
+
+## 🌐 Building the Web Application
+
+### 🚀 Why Streamlit?
+Streamlit is chosen for its simplicity in developing interactive AI-driven web applications. Key benefits include:
+- **Interactive Widgets:** Provides buttons, sliders, and file uploaders.
+- **Real-time Updates:** Ensures live feedback, crucial for PCB inspection.
+- **Easy Integration:** Works seamlessly with OpenCV, PIL, and YOLO.
+- **Rapid Prototyping:** Simple syntax enables quick development and testing.
+
+### 📂 Application Structure
+The web app offers real-time PCB defect detection through a live camera feed or image uploads.
+
+### 🏠 Home Page
+Displays a **welcome message** and describes the types of defects detected:
+- Missing Hole
+- Mouse Bite
+- Open Circuit
+- Short Circuit
+- Spur
+- Spurious Copper
+
+Users can choose between **Live Inspection** or **Upload Images**.
+
+
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/CoverPage.png)
+*Figure 7: Cover Page*
+
+### 📑 Sidebar Menu
+Provides navigation options:
+- **About**
+- **PCB Defects**
+- **Component Defects**
+
+### 🖼 PCB Defects Page
+#### ⚙ Model Configuration
+Users can:
+- Select **Live Camera** or **Upload PCB Image**.
+- Adjust model confidence using a slider.
+
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/PCBdefects_upload.png)
+*Figure 8: PCB defects Detection Page* 
+
+#### 🎥 Live Camera Mode
+- Captures real-time images.
+- Detects defects using the YOLO model.
+- Highlights defects on the processed image.
+
+#### 📤 Upload PCB Image Mode
+- Users upload PCB images in various formats.
+- The app processes and highlights detected defects.
+
+### 🔩 Component Defects Page
+Similar to PCB defects detection, but focuses on **component placement**.
+
+![PCB](https://github.com/JulianSilva2001/PCB-Defects-Detetion-Device/blob/main/Documentation/Component%20Placement%20Inspection%20.png)
+*Figure 8: Component Placement Inspection Page* 
+
+#### 🎥 Live Camera Mode
+- Captures a reference image.
+- Compares it with live images to detect misalignments.
+
+#### 📤 Upload PCB Image Mode
+- Users upload a **reference** and **source image**.
+- The app highlights component defects based on differences.
 
 ## Getting Started
 
